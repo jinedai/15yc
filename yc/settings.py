@@ -15,8 +15,14 @@ SPIDER_MODULES = ['yc.spiders']
 NEWSPIDER_MODULE = 'yc.spiders'
 
 ITEM_PIPELINES={
-    'yc.pipelines.JsonWithEncodingPipeline':2,
+#    'yc.pipelines.JsonWithEncodingPipeline':2,
+    'yc.MongoPipeline.MongoPipeline': 3,
 }
+
+MONGODB_SERVER = "localhost"   
+MONGODB_PORT = 27017   
+MONGODB_DB = "test"   
+MONGODB_COLLECTION = "15yc"  
 
 #USER_AGENT = 'Mozilla/5.0 (Linux; U; Android 4.3; en-us; SM-N900T Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
 #USER_AGENT = 'MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'

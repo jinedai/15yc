@@ -42,7 +42,6 @@ class YcSpider(CrawlSpider) : #CrawlSpiderÓÃÀ´±é²¼×¥È¡£¬Í¨¹ırulesÀ´²éÕÒËùÓĞ·ûºÏµ
     def parse_frame(self, response):
         frameurl = response.xpath('//iframe/@src').extract()[0]
         videoName = response.xpath('//h1[@class="title"]/text()').extract()[0]
-        #videoName = re.sub("ÕıÔÚ²¥·Å:", "", videoName)
         videoName = videoName[5:-1]
 
         #print 'frame_url:'+frameurl
